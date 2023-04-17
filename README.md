@@ -7,6 +7,8 @@
     Generate desired path for the JetBot
     Takes obstacle map, start position, end position
     Outputs sequence of coordinates of the optimal path
+#### path finder
+    Correspond to the pathfinding algorithm section in the report, include test code for different algorithms
 ### vision_pkg
 #### state (sub pkg)
         Video frame calibration, get JetBot state, get desired position
