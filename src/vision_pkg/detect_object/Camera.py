@@ -25,7 +25,7 @@ def generate_map(img):
     # hsv_up_bound = np.array([180, 255, 255])
 
     # pink sheet (with reflection light)
-    hsv_low_bound = np.array([0, 56, 195])
+    hsv_low_bound = np.array([95, 60, 131])
     hsv_up_bound = np.array([180, 255, 255])
 
     # # dark blue file pkg
@@ -45,7 +45,7 @@ def generate_map(img):
 
     # dilation to enlarge profiles
     kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (3, 3))
-    dilated_mask = cv2.dilate(mask, kernel, iterations=6)
+    dilated_mask = cv2.dilate(mask, kernel, iterations=7)
     cv2.imshow('mask', mask)
     cv2.imshow('dilated', dilated_mask)
     cv2.waitKey(1000)

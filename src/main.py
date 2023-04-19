@@ -13,7 +13,7 @@ from control_pkg.cftoc import solve_cftoc
 from path_pkg.main import A_star_algorithm
 
 # port & UDP
-UDP_IP = "172.20.10.8"
+UDP_IP = "172.20.10.11"
 UDP_PORT = 5005
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 # Measure the board size [length, height] in mm
@@ -143,7 +143,7 @@ while True:
     # save jetbot states in m and rad
     jetbot_x_tot.append(current_state[0]*0.001)
     jetbot_y_tot.append(current_state[1]*0.001)
-    jetbot_th_tot.append(current_state[2]*0.001)
+    jetbot_th_tot.append(current_state[2])
 
     # save desired state for each loop
     x_des_tot.append(optimal_path[M+1, 0])

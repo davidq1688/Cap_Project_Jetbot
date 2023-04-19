@@ -20,7 +20,7 @@ def solve_cftoc(x0, xf, ul_prev, ur_prev):
   model.u = pyo.Var(model.uidx, model.tidx)
 
   # cost Function:
-  model.cost = pyo.Objective(expr = sum((model.x[0, t]-xf[0])**2 + (model.x[1, t]-xf[1])**2 + 0*(model.x[2, t]-xf[2])**2
+  model.cost = pyo.Objective(expr = sum((model.x[0, t]-xf[0])**2 + (model.x[1, t]-xf[1])**2 + 0.00003*(model.x[2, t]-xf[2])**2
                                         # + 0.01*((model.u[0, 0] - ur_prev)**2 + (model.u[1, 0] - ul_prev)**2)
                                         + 0.00001*(model.u[0, t]**2 + model.u[1, t]**2)
                                         for t in model.tidx if t <= N - 1), sense=pyo.minimize)

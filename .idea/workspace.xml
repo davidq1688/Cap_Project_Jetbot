@@ -6,6 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="daeea89c-565e-407e-9f98-585158d5e188" name="Changes" comment="v1.0">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/control_pkg/cftoc.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/control_pkg/cftoc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vision_pkg/detect_object/Camera.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/vision_pkg/detect_object/Camera.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
