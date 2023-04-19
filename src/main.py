@@ -94,11 +94,14 @@ end_coord = np.array([end_pos[1], end_pos[0]])
 # f.close()
 # np.savetxt('tmp_Astar', A_star_map, fmt='%d')
 path = A_star_algorithm(A_star_map, start_coord[0], start_coord[1], end_coord[0], end_coord[1])
+if path is None:
+    print('No path found')
+    exit()
 print('Found optimal path')
 
 # Run MPC
 current_state = np.array([start_state[0]*10, start_state[1]*10, start_state[2]])
-
+print(type(path))
 optimal_path = heading_angle_generator(path, current_state[2])
 
 M = 0
@@ -206,9 +209,18 @@ while True:
     time_loop = toc - tic
     # print('time_loop: ', time_loop)
 
+plt.figure(1)
 plt.plot(x_des_tot, y_des_tot, 'ro', label='Desired path')
 plt.plot(jetbot_x_tot, jetbot_y_tot, label='Actual path')
 plt.legend()
 plt.xlabel('x (m)')
 plt.ylabel('y (m)')
+
+plt.figure(2)
+plt.plot(th_des_tot, label='Desired angle')
+plt.plot(jetbot_th_tot, label='Actual angle')
+plt.legend()
+plt.xlabel('Discrete time step')
+plt.ylabel('Angle (rad)')
+
 plt.show()

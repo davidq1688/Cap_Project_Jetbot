@@ -27,7 +27,7 @@ def A_star_algorithm(matrix, sx, xy, ex, ey):
                 curr_pos = parent[curr_pos]
             path.append(start)
             path.reverse()
-            return np.array(path)
+            return np.asarray(path)
         
         for move in moves:
             neighbor_pos = (curr_pos[0] + move[0], curr_pos[1] + move[1])
@@ -47,7 +47,7 @@ def A_star_algorithm(matrix, sx, xy, ex, ey):
                 parent[neighbor_pos] = curr_pos
     
     print("No path found for A star")
-    return None, num_nodes
+    return None
 
 def heuristic(pos1, pos2):
     return abs(pos1[0] - pos2[0]) + abs(pos1[1] - pos2[1])
