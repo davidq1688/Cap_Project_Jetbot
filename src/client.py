@@ -1,3 +1,4 @@
+# Note this file runs on jetbot
 import socket
 import json
 from jetbot import Robot
